@@ -1,0 +1,21 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+  mysql:
+    image: mysql:8.0
+    container_name: myproject_mysql
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: tech_exam_db
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - mysql_data:/var/lib/mysql
+volumes:
+  mysql_data:
