@@ -15,7 +15,7 @@ This project is a Laravel-based API that provides data endpoints such as users, 
 
 ```bash
 git clone https://github.com/ken20155/TECH-EXAM-SLMP.git
-cd TECH-EXAM-SIMP
+cd TECH-EXAM-SLMP
 composer install
 cp .env.example .env
 php artisan key:generate
